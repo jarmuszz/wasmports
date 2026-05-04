@@ -1,0 +1,27 @@
+[submodule "scalacheck-wasm"]
+	path = repos/scalacheck
+	url = https://github.com/jarmuszz/scalacheck-wasm
+[submodule "munit-wasm"]
+	path = repos/munit
+	url = https://github.com/jarmuszz/munit-wasm
+[submodule "munit-scalacheck-wasm"]
+	path = repos/munit-scalacheck
+	url = https://github.com/jarmuszz/munit-scalacheck-wasm
+[submodule "discipline-wasm"]
+	path = repos/discipline
+	url = https://github.com/jarmuszz/discipline-wasm
+[submodule "discipline-munit-wasm"]
+	path = repos/discipline-munit
+	url = https://github.com/jarmuszz/discipline-munit-wasm
+[submodule "coop-wasm"]
+	path = repos/coop
+	url = https://github.com/jarmuszz/coop-wasm
+[submodule "cats-wasm"]
+	path = repos/cats
+	url = https://github.com/jarmuszz/cats-wasm
+[submodule "cats-mtl-wasm"]
+	path = repos/cats-mtl
+	url = https://github.com/jarmuszz/cats-mtl-wasm
+[submodule "cats-effect-wasm"]
+	path = repos/cats-effect
+	url = https://github.com/jarmuszz/cats-effect-wasm
