@@ -23,6 +23,8 @@
       in {
         devShells.default = pkgs.mkShell {
           nativeBuildInputs = with pkgs; [
+            sbt
+            scala-cli
             nodejs
             wasm-tools
             wasmtime
