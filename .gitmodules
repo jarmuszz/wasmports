@@ -25,3 +25,6 @@
 [submodule "repos/scalacheck"]
 	path = repos/scalacheck
 	url = https://github.com/jarmuszz/scalacheck-wasm
+[submodule "repos/scala-wasm"]
+	path = repos/scala-wasm
+	url = https://github.com/jarmuszz/scala-wasm
