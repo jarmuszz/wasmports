@@ -19,8 +19,8 @@ val config = Map(
       "munit",
       "scala-wasm"
     ),
-    republishJS = "++2.13.18; update; wasmTests/publishLocal",
-    republish = "++2.13.18; update; wasmTests/publishLocal"
+    republishJS = "++2.13.18; update; coreJS/publishLocal",
+    republish = "++2.13.18; update; core/publishLocal"
   ),
 
   "cats-mtl" -> (
