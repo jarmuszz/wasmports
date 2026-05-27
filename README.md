@@ -8,8 +8,5 @@ This repo serves as the central hub for the [`cats-effect`](https://typelevel.or
 ## Getting the code to run
 The Component Model backend is developed as a fork of `scala-js` called [`scala-wasm`](https://github.com/scala-wasm/scala-wasm).
 
-You will need to compile all of your dependencies with `scala-wasm` because otherwise the IR will not contain JS-free Wasm code and the linking phase will fail. The `rebuild.scala` script helps with mass-rebuilds:
-```
-    ./rebuild.scala (list|publishJS|publishAll) packageName
-```
-It walks through the packages depending on `packageName` and publishes them to the local ivy2 repository in the dependency order. Forked dependencies have their version hardcoded so that it doesn't change between rebuilds.
+In order to run the code, you first have to compile and publish locally the fork of `munit`. After that, you should be free to compile `cats-effect`.
+In theory, running `./rebuild.scala publishAll munit` should do the thing.
