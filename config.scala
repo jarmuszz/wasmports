@@ -2,7 +2,7 @@ val repoPath = "repos"
 
 val config = Map(
   "cats" -> (
-    deps = List("scalacheck", "discipline", "discipline-munit", "munit", "scala-wasm"),
+    deps = List("discipline", "discipline-munit", "munit", "scala-wasm"),
     republishJS = "++2.13.18; update; catsJS/publishLocal",
     republish = "++2.13.18; update; cats/publishLocal"
   ),
@@ -10,11 +10,9 @@ val config = Map(
   "cats-effect" -> (
     deps = List(
       "cats",
-      "scalacheck",
       "coop",
       "cats-mtl",
       "discipline-munit",
-      //"scala-js-macrotask-executro",
       "munit-scalacheck",
       "munit",
       "scala-wasm"
@@ -33,7 +31,6 @@ val config = Map(
     deps = List(
       "cats-mtl",
       "cats",
-      //"specs2-core",
       "scala-wasm"
     ),
     republishJS = "++2.13.18; update; rootJS/publishLocal",
@@ -41,24 +38,19 @@ val config = Map(
   ),
 
   "discipline" -> (
-    deps = List("scalacheck", "scala-wasm"),
+    deps = List("scala-wasm"),
     republishJS = "++2.13.18; update; disciplineJS/publishLocal",
     republish = "++2.13.18; update; discipline/publishLocal"
   ),
 
   "discipline-munit" -> (
-    deps = List("munit", "munit-scalacheck", "discipline", "scala-wasm"),
+    deps = List("munit", "discipline", "scala-wasm"),
     republishJS = "++2.13.18; update; rootJS/publishLocal",
     republish = "++2.13.18; update; root/publishLocal"
   ),
 
   "munit" -> (
     deps = List(
-      //"junit",
-      //"scala-reflect",
-      //"scalajs-test-interface",
-      //"scalajs-junit-test-runtime",
-      //"google-cloud-storage"
       "scala-wasm"
     ),
     republishJS = "++2.13.18; update; munitJS/publishLocal",
@@ -66,18 +58,9 @@ val config = Map(
   ),
 
   "munit-scalacheck" -> (
-    deps = List("scalacheck", "munit", "scala-wasm"),
+    deps = List("munit", "scala-wasm"),
     republishJS = "++2.13.18; update; munitScalacheckJS/publishLocal",
     republish = "++2.13.18; update; munit-scalacheck/publishLocal"
-  ),
-
-  "scalacheck" -> (
-    deps = List(
-      //"scalajs-test-interface"
-      "scala-wasm"
-    ),
-    republishJS = "++2.13.18; update; rootJS/publishLocal",
-    republish = "++2.13.18; update; root/publishLocal"
   ),
 
   "scala-wasm" -> (
