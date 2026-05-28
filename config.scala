@@ -10,7 +10,6 @@ val config = Map(
   "cats-effect" -> (
     deps = List(
       "cats",
-      "coop",
       "cats-mtl",
       "discipline-munit",
       "munit-scalacheck",
@@ -23,16 +22,6 @@ val config = Map(
 
   "cats-mtl" -> (
     deps = List("cats", "munit", "discipline-munit", "scala-wasm"),
-    republishJS = "++2.13.18; update; rootJS/publishLocal",
-    republish = "++2.13.18; update; root/publishLocal"
-  ),
-
-  "coop" -> (
-    deps = List(
-      "cats-mtl",
-      "cats",
-      "scala-wasm"
-    ),
     republishJS = "++2.13.18; update; rootJS/publishLocal",
     republish = "++2.13.18; update; root/publishLocal"
   ),
