@@ -7,9 +7,6 @@
 [submodule "repos/cats-mtl"]
 	path = repos/cats-mtl
 	url = https://github.com/jarmuszz/cats-mtl-wasm
-[submodule "repos/coop"]
-	path = repos/coop
-	url = https://github.com/jarmuszz/coop-wasm
 [submodule "repos/discipline-munit"]
 	path = repos/discipline-munit
 	url = https://github.com/jarmuszz/discipline-munit-wasm
@@ -22,9 +19,6 @@
 [submodule "repos/munit"]
 	path = repos/munit
 	url = https://github.com/jarmuszz/munit-wasm
-[submodule "repos/scalacheck"]
-	path = repos/scalacheck
-	url = https://github.com/jarmuszz/scalacheck-wasm
 [submodule "repos/scala-wasm"]
 	path = repos/scala-wasm
 	url = https://github.com/jarmuszz/scala-wasm
