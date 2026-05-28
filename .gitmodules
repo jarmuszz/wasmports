@@ -10,9 +10,6 @@
 [submodule "repos/discipline-munit"]
 	path = repos/discipline-munit
 	url = https://github.com/jarmuszz/discipline-munit-wasm
-[submodule "repos/discipline"]
-	path = repos/discipline
-	url = https://github.com/jarmuszz/discipline-wasm
 [submodule "repos/munit-scalacheck"]
 	path = repos/munit-scalacheck
 	url = https://github.com/jarmuszz/munit-scalacheck-wasm

@@ -2,7 +2,7 @@ val repoPath = "repos"
 
 val config = Map(
   "cats" -> (
-    deps = List("discipline", "discipline-munit", "munit", "scala-wasm"),
+    deps = List("discipline-munit", "munit", "scala-wasm"),
     republishJS = "++2.13.18; update; catsJS/publishLocal",
     republish = "++2.13.18; update; cats/publishLocal"
   ),
@@ -26,14 +26,8 @@ val config = Map(
     republish = "++2.13.18; update; root/publishLocal"
   ),
 
-  "discipline" -> (
-    deps = List("scala-wasm"),
-    republishJS = "++2.13.18; update; disciplineJS/publishLocal",
-    republish = "++2.13.18; update; discipline/publishLocal"
-  ),
-
   "discipline-munit" -> (
-    deps = List("munit", "discipline", "scala-wasm"),
+    deps = List("munit", "scala-wasm"),
     republishJS = "++2.13.18; update; rootJS/publishLocal",
     republish = "++2.13.18; update; root/publishLocal"
   ),
