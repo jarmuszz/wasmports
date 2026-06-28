@@ -40,6 +40,7 @@ val config = Map(
   "discipline-munit" -> (
     deps = List(
       "munit",
+      "munit-scalacheck",
       //"scala-wasm"
     ),
     republishJS = "++2.13.18; update; rootJS/publishLocal",
