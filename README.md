@@ -13,5 +13,6 @@ You will need to compile some of your dependencies with `scala-wasm` because oth
     ./rebuild.scala (list|publishJS|publishAll) packageName
 ```
 It walks through the packages depending on `packageName` and publishes them to the local ivy2 repository in the dependency order. Forked dependencies have their version hardcoded so that it doesn't change between rebuilds.
+Packages don't have a single dependency but if you want to rebuild all of them, you can pass `packageName` as `root`.
 
 In general, any package compiled with scala-js <=1.20.1 will probably need to be rebuilt with something newer.

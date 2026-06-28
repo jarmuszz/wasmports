@@ -1,8 +1,14 @@
+val rootElement = "root"
+
 val repoPath = "repos"
 
 val config = Map(
   "cats" -> (
-    deps = List("discipline-munit", "munit", "scala-wasm"),
+    deps = List(
+      "discipline-munit",
+      "munit",
+      //"scala-wasm"
+    ),
     republishJS = "++2.13.18; update; catsJS/publishLocal",
     republish = "++2.13.18; update; cats/publishLocal"
   ),
@@ -14,38 +20,50 @@ val config = Map(
       "discipline-munit",
       "munit-scalacheck",
       "munit",
-      "scala-wasm"
+      //"scala-wasm"
     ),
     republishJS = "++2.13.18; update; coreJS/publishLocal",
     republish = "++2.13.18; update; core/publishLocal"
   ),
 
   "cats-mtl" -> (
-    deps = List("cats", "munit", "discipline-munit", "scala-wasm"),
+    deps = List(
+      "cats",
+      "munit",
+      "discipline-munit",
+      //"scala-wasm"
+    ),
     republishJS = "++2.13.18; update; rootJS/publishLocal",
     republish = "++2.13.18; update; root/publishLocal"
   ),
 
   "discipline-munit" -> (
-    deps = List("munit", "scala-wasm"),
+    deps = List(
+      "munit",
+      //"scala-wasm"
+    ),
     republishJS = "++2.13.18; update; rootJS/publishLocal",
     republish = "++2.13.18; update; root/publishLocal"
   ),
 
   "munit" -> (
     deps = List(
-      "scala-wasm"
+      //"scala-wasm"
     ),
     republishJS = "++2.13.18; update; munitJS/publishLocal",
     republish = "++2.13.18; update; munit/publishLocal"
   ),
 
   "munit-scalacheck" -> (
-    deps = List("munit", "scala-wasm"),
+    deps = List(
+      "munit",
+      //"scala-wasm"
+    ),
     republishJS = "++2.13.18; update; munitScalacheckJS/publishLocal",
     republish = "++2.13.18; update; munit-scalacheck/publishLocal"
   ),
 
+  /*
   "scala-wasm" -> (
     deps = List.empty[String],
     republishJS = """
@@ -100,4 +118,5 @@ val config = Map(
       |++2.13.18 compiler2_13/publishLocal;
     """.stripMargin
   )
+  */
 )

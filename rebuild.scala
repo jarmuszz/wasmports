@@ -15,8 +15,11 @@ object Main extends IOApp {
   val reversed: Map[String, List[String]] = {
     val mb = scala.collection.mutable.Map.empty[String, List[String]]
 
+    mb(rootElement) = List.empty
+
     config.foreach { (node, _) =>
       mb(node) = List.empty
+      mb.updateWith(rootElement)(_.map(_ :+ node))
     }
 
     config.foreach { (node, v) => 
@@ -47,7 +50,7 @@ object Main extends IOApp {
   }
 
   def republish(node: String, publishCommand: String => String): IO[Unit] = {
-    val sorted = topsort(node)
+    val sorted = if (node == rootElement) topsort(node).tail else topsort(node)
 
     Stream
       .emits[IO, String](sorted)
@@ -68,6 +71,7 @@ object Main extends IOApp {
 
   def run(args: List[String]): IO[ExitCode] = {
     args match {
+      case List("publishRootAll") => republish("root", config(_).republish).as(ExitCode.Success)
       case List("publishJS", pkg) => republish(pkg, config(_).republishJS).as(ExitCode.Success)
       case List("publishAll", pkg) => republish(pkg, config(_).republish).as(ExitCode.Success)
       case List("list", pkg) => IO.println(topsort(pkg)).as(ExitCode.Success)
