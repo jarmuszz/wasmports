@@ -16,3 +16,6 @@
 [submodule "repos/munit"]
 	path = repos/munit
 	url = https://github.com/jarmuszz/munit-wasm
+[submodule "repos/wasmports-demo"]
+	path = repos/wasmports-demo
+	url = https://github.com/jarmuszz/wasmports-demo

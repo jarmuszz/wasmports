@@ -3,6 +3,12 @@ val rootElement = "root"
 val repoPath = "repos"
 
 val config = Map(
+  "wasmports-demo" -> (
+    deps = List("cats-effect"),
+    republishJS = "update; run",
+    republish = "update; run"
+  ),
+
   "cats" -> (
     deps = List(
       "discipline-munit",
