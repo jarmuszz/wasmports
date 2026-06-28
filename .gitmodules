@@ -16,6 +16,3 @@
 [submodule "repos/munit"]
 	path = repos/munit
 	url = https://github.com/jarmuszz/munit-wasm
-[submodule "repos/scala-wasm"]
-	path = repos/scala-wasm
-	url = https://github.com/jarmuszz/scala-wasm
