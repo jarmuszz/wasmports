@@ -9,6 +9,18 @@ val config = Map(
     republish = "update; run"
   ),
 
+  "scalacheck-effect" -> (
+    deps = List("munit", "cats"),
+    republishJS = "update; rootJS/publishLocal",
+    republish = "update; root/publishLocal"
+  ),
+
+  "munit-cats-effect" -> (
+    deps = List("munit", "cats-effect"),
+    republishJS = "update; rootJS/publishLocal",
+    republish = "update; root/publishLocal"
+  ),
+
   "cats" -> (
     deps = List(
       "discipline-munit",
