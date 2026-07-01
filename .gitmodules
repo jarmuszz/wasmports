@@ -19,3 +19,9 @@
 [submodule "repos/wasmports-demo"]
 	path = repos/wasmports-demo
 	url = https://github.com/jarmuszz/wasmports-demo
+[submodule "repos/scalacheck-effect"]
+	path = repos/scalacheck-effect
+	url = https://github.com/jarmuszz/scalacheck-effect-wasm
+[submodule "repos/munit-cats-effect"]
+	path = repos/munit-cats-effect
+	url = https://github.com/jarmuszz/munit-cats-effect-wasm
