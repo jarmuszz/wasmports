@@ -9,6 +9,19 @@ val config = Map(
     republish = "update; run"
   ),
 
+  "fs2" -> (
+    deps = List(
+      "cats-effect",
+      "cats-core", 
+      "cats-mtl",
+      "discipline-munit",
+      "munit-cats-effect",
+      "scalacheck-effect"
+    ),
+    republishJS = "update; rootJS/publishLocal",
+    republish = "update; root/publishLocal"
+  ),
+
   "scalacheck-effect" -> (
     deps = List("munit", "cats"),
     republishJS = "update; rootJS/publishLocal",
