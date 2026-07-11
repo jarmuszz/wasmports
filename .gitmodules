@@ -25,3 +25,6 @@
 [submodule "repos/munit-cats-effect"]
 	path = repos/munit-cats-effect
 	url = https://github.com/jarmuszz/munit-cats-effect-wasm
+[submodule "repos/fs2"]
+	path = repos/fs2
+	url = https://github.com/jarmuszz/fs2-wasm.git
