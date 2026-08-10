@@ -28,3 +28,6 @@
 [submodule "repos/fs2"]
 	path = repos/fs2
 	url = https://github.com/jarmuszz/fs2-wasm.git
+[submodule "repos/ip4s"]
+	path = repos/ip4s
+	url = https://github.com/jarmuszz/ip4s-wasm.git
