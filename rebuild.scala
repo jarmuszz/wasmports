@@ -68,12 +68,25 @@ object Main extends IOApp {
       .drain
   }
 
+  def republishOne(node: String, publishCommand: String => String): IO[Unit] = {
+    ProcessBuilder("sbt", publishCommand(node))
+      .withWorkingDirectory(Path(repoPath) / Path(node))
+      .spawn[IO]
+      .use { proc =>
+        val printStdout = proc.stdout.map(_.toChar.toString).evalTapChunk(IO.print).compile.drain
+        val exit = proc.exitValue.ensure(java.io.IOException("Exit code non-zero"))(_ == 0)
+        printStdout >> exit
+      }.void
+  }
+
 
   def run(args: List[String]): IO[ExitCode] = {
     args match {
       case List("publishRootAll") => republish("root", config(_).republish).as(ExitCode.Success)
       case List("publishJS", pkg) => republish(pkg, config(_).republishJS).as(ExitCode.Success)
       case List("publishAll", pkg) => republish(pkg, config(_).republish).as(ExitCode.Success)
+      case List("publishOne", pkg) => republishOne(pkg, config(_).republish).as(ExitCode.Success)
+      case List("publishOneJS", pkg) => republishOne(pkg, config(_).republishJS).as(ExitCode.Success)
       case List("list", pkg) => IO.println(topsort(pkg)).as(ExitCode.Success)
       case _ => IO.raiseError(IllegalArgumentException(s"Invalid args: ${args}"))
     }
