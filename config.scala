@@ -120,8 +120,8 @@ val config = Map(
 
   "discipline" -> (
     deps = List.empty,
-    republishJS = "++2.13.18; rootJS/publishLocal",
-    republish = "++2.13.18; publishLocal",
+    republishJS = "++2.13.18; disciplineJS/publishLocal",
+    republish = "++2.13.18; discipline/publishLocal",
   )
 
   /*
