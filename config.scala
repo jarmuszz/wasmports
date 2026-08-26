@@ -75,6 +75,7 @@ val config = Map(
     deps = List(
       "munit",
       "munit-scalacheck",
+      "discipline",
       //"scala-wasm"
     ),
     republishJS = "++2.13.18; update; rootJS/publishLocal",
@@ -104,7 +105,8 @@ val config = Map(
       "cats",
       "cats-effect",
       "munit-scalacheck",
-      "munit-cats-effect"
+      "munit-cats-effect",
+      "discipline"
     ),
     republishJS = "++2.13.18; update; rootJS/publishLocal",
     republish = "++2.13.18; update; publishLocal"
@@ -113,6 +115,12 @@ val config = Map(
   "wasi4s" -> (
     deps = List.empty,
     republishJS = "++2.13.18; publishLocal",
+    republish = "++2.13.18; publishLocal",
+  ),
+
+  "discipline" -> (
+    deps = List.empty,
+    republishJS = "++2.13.18; rootJS/publishLocal",
     republish = "++2.13.18; publishLocal",
   )
 
