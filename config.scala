@@ -16,7 +16,8 @@ val config = Map(
       "cats-mtl",
       "discipline-munit",
       "munit-cats-effect",
-      "scalacheck-effect"
+      "scalacheck-effect",
+      "ip4s"
     ),
     republishJS = "update; rootJS/publishLocal",
     republish = "update; root/publishLocal"
@@ -94,6 +95,17 @@ val config = Map(
     republishJS = "++2.13.18; update; munitScalacheckJS/publishLocal",
     republish = "++2.13.18; update; munit-scalacheck/publishLocal"
   ),
+
+  "ip4s" -> (
+    deps = List(
+      "cats",
+      "cats-effect",
+      "munit-scalacheck",
+      "munit-cats-effect"
+    ),
+    republishJS = "++2.13.18; update; rootJS/publishLocal",
+    republish = "++2.13.18; update; publishLocal"
+  )
 
   /*
   "scala-wasm" -> (
