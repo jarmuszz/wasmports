@@ -31,3 +31,6 @@
 [submodule "repos/ip4s"]
 	path = repos/ip4s
 	url = https://github.com/jarmuszz/ip4s-wasm
+[submodule "repos/wasi4s"]
+	path = repos/wasi4s
+	url = https://github.com/jarmuszz/wasi4s/
