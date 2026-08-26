@@ -34,3 +34,6 @@
 [submodule "repos/wasi4s"]
 	path = repos/wasi4s
 	url = https://github.com/jarmuszz/wasi4s/
+[submodule "repos/discipline"]
+	path = repos/discipline
+	url = https://github.com/jarmuszz/discipline-wasm
