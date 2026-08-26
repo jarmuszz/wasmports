@@ -93,7 +93,7 @@ val config = Map(
       //"scala-wasm"
     ),
     republishJS = "++2.13.18; update; munitScalacheckJS/publishLocal",
-    republish = "++2.13.18; update; munit-scalacheck/publishLocal"
+    republish = "++2.13.18; update; munitScalacheck/publishLocal"
   ),
 
   "ip4s" -> (
