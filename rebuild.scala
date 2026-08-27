@@ -66,15 +66,16 @@ object Main extends IOApp {
       case ScalaVer.all => s"++3.3; $action; ++2.13; $action; ++2.12; $action"
       case v => s"++$v ; $action"
     })
-    println(cmd)
-    ProcessBuilder("sbt", cmd)
-      .withWorkingDirectory(Path(repoPath) / Path(node))
-      .spawn[IO]
-      .use { proc =>
-        val printStdout = proc.stdout.map(_.toChar.toString).evalTapChunk(IO.print).compile.drain
-        val exit = proc.exitValue.ensure(java.io.IOException("Exit code non-zero"))(_ == 0)
-        printStdout >> exit
-      }.void
+    IO.println(s"$node: $cmd") >>
+      ProcessBuilder.apply("sbt", cmd)
+        .withWorkingDirectory(Path(repoPath) / Path(node))
+        .withExtraEnv(Map("SBT_OPTS" -> "-XX:MaxMetaspaceSize=512M"))
+        .spawn[IO]
+        .use { proc =>
+          val printStdout = proc.stdout.map(_.toChar.toString).evalTapChunk(IO.print).compile.drain
+          val exit = proc.exitValue.ensure(java.io.IOException("Exit code non-zero"))(_ == 0)
+          printStdout >> exit
+        }.void
   }
 
   sealed trait ScalaVer
