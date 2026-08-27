@@ -8,12 +8,11 @@ This repo serves as the central hub for the [`cats-effect`](https://typelevel.or
 ## Getting the code to run
 The Component Model backend is developed as a fork of `scala-js` called [`scala-wasm`](https://github.com/scala-wasm/scala-wasm).
 
-You will need to compile some of your dependencies with `scala-wasm` because otherwise the IR will not contain JS-free Wasm code and the linking phase will fail. The `rebuild.scala` script helps with mass-rebuilds:
+You will need to compile some of your dependencies with `scala-wasm` because otherwise the IR may not contain JS-free Wasm code and the linking phase will fail. The `rebuild.scala` script helps with mass-rebuilds:
 ```
-    ./rebuild.scala (list|publishJS|publishAll|publishOneJS|publishOne) packageName
+    ./rebuild.scala list packageName
+    ./rebuild.scala publish [-s (one|all)] [-t (js|all)] [-V (2.12|2.13|3.3|all)] packageName
 ```
-It walks through the packages depending on `packageName` and publishes them to the local ivy2 repository in the dependency order. Forked dependencies have their version hardcoded so that it doesn't change between rebuilds.
-Packages don't have a single shared dependency but if you want to rebuild all of them, you can pass `packageName` as `root`.
-You can also republish one package using `publishOne`/`publishOneJS`.
+It walks through the packages depending on `packageName` and publishes them to the local ivy2 repository in the dependency order. Forked dependencies have their version hardcoded so that it doesn't change between rebuilds. `./rebuild.scala packageName` defaults to `rebuild.scala -s all -t all -V all packageName`.
 
-In general, any package compiled with scala-js <=1.20.1 will probably need to be rebuilt with something newer.
+Packages don't have a single shared dependency but if you want to rebuild all of them, you can pass `packageName` as `root`. In general, any package compiled with scala-js <=1.20.1 will probably need to be rebuilt with something newer.
