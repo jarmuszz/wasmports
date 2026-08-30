@@ -9,15 +9,16 @@
       let
         pkgs = import nixpkgs { inherit system; };
         wit-bindgen-scala = pkgs.rustPlatform.buildRustPackage {
-          pname = "wit-bindgen";
-          name = "wit-bindgen";
+          pname = "wit-bindgen-scala";
+          name = "wit-bindgen-scala";
+          doCheck = false;
           src = pkgs.fetchFromGitHub {
             owner = "scala-wasm";
-            repo = "wit-bindgen";
-            rev = "4f740e9e767e0e1f50f87c708aa50a3970a519de";
-            hash = "sha256-WfAgCFkAoPwi+SDZZYhXzh5UKahwWT902KL+7Qi6yBo=";
+            repo = "wit-bindgen-scala";
+            rev = "v0.1.0-rc.1";
+            hash = "sha256-RC/1hr/XNnInXfHX8MLaM5L3M/4meYcBbJ41ixvieU8=";
           };
-         cargoHash = "sha256-bAs+j5HJkJ5j6ZZBzfPDbMeu96c92VDbrIt+QKBPofU=";
+         cargoHash = "sha256-0SFCdV1Bj+rYa0WCzqPGlZNTzhEx0u0orHdNe8+z7kc=";
         };
 
       in {
