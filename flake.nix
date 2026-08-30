@@ -15,8 +15,8 @@
           src = pkgs.fetchFromGitHub {
             owner = "scala-wasm";
             repo = "wit-bindgen-scala";
-            rev = "v0.1.0-rc.1";
-            hash = "sha256-RC/1hr/XNnInXfHX8MLaM5L3M/4meYcBbJ41ixvieU8=";
+            rev = "190fb717a2260bc24d57347cf9349f729504118c";
+            hash = "sha256-RalMNdqJr9aH8JSGG8rasu3Dcm8njFPHrE1uE8mZF5Q=";
           };
          cargoHash = "sha256-0SFCdV1Bj+rYa0WCzqPGlZNTzhEx0u0orHdNe8+z7kc=";
         };
