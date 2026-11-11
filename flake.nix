@@ -15,10 +15,10 @@
           src = pkgs.fetchFromGitHub {
             owner = "scala-wasm";
             repo = "wit-bindgen-scala";
-            rev = "v0.1.0-rc.1";
-            hash = "sha256-RC/1hr/XNnInXfHX8MLaM5L3M/4meYcBbJ41ixvieU8=";
+            rev = "v0.1.0";
+            hash = "sha256-ipQFTer7ul+v7lKv0SZMS67XV0gZ3Q2H3vFekEsOh+w=";
           };
-         cargoHash = "sha256-0SFCdV1Bj+rYa0WCzqPGlZNTzhEx0u0orHdNe8+z7kc=";
+         cargoHash = "sha256-bwByPgXbLmWFAoitk82IqwZKakL4AO2ntv6ry5TPuZ4=";
         };
 
       in {
