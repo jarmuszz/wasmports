@@ -37,3 +37,6 @@
 [submodule "repos/discipline"]
 	path = repos/discipline
 	url = https://github.com/jarmuszz/discipline-wasm
+[submodule "repos/scalacheck"]
+	path = repos/scalacheck
+	url = https://github.com/jarmuszz/scalacheck-wasm.git
